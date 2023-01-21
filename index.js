@@ -17,7 +17,7 @@ const Intern = require('./lib/Intern');
 // 2.
 // import page-template.js from subfolder src with require and assign it to a variable to be called later to render html
 
-const render = require('./src/page-template');
+const render = require('./src/page-template.js');
 
 // 3.
 // create variable to hold the path to dist subfolder using path lib resolve method
