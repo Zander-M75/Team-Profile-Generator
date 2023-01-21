@@ -1,6 +1,8 @@
 // create team function with team array passed in
 const create_team_function = team => {
 
+
+
     // create the manager html function with manager object passed in as input parameter
     // - return template literal replacing name, role, id, email, office number with getXXX methods from manager object
     const create_manager_html_function = manager => {
