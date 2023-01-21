@@ -12,7 +12,7 @@ const create_team_function = team => {
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
         <div class="card-header">${manager.name}</div>
         <div class="card-body">
-          <h5 class="card-title"></h5>
+          <h5 class="card-title"> ${manager.getRole()}</h5>
           <li class="body-item">ID:${manager.id}</li>
           <li class="body-item">Email:${manager.email}</li>
           <li class="body-item">Office:${manager.officeNumber}</li>
@@ -30,7 +30,7 @@ const create_team_function = team => {
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
         <div class="card-header">${engineer.getName()}</div>
         <div class="card-body">
-          <h5 class="card-title"></h5>
+          <h5 class="card-title">${engineer.getRole()}</h5>
           <li class="body-item">ID:${engineer.getId()}</li>
           <li class="body-item">Email:${engineer.getEmail()}</li>
           <li class="body-item">Github:${engineer.getGithub()}</li>
@@ -48,7 +48,7 @@ const create_team_function = team => {
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
         <div class="card-header">${intern.getName()}</div>
         <div class="card-body">
-          <h5 class="card-title"></h5>
+          <h5 class="card-title">${intern.getRole()}</h5>
           <li class="body-item">ID:${intern.getId()}</li>
           <li class="body-item">Email:${intern.getEmail()}</li>
           <li class="body-item">School:${intern.getSchool()}</li>
@@ -59,42 +59,6 @@ const create_team_function = team => {
         `;
     };
 
-    //     // create an empty employee html array to store employee html for manager, engineers, interns
-    //     const html = [];
-
-    //     // make call to filter method on team array - for each employee in team array to check if the employee's role is "Manager" via the employee's get role method and assign the new manager array returned from filter method to a new variable
-    //     // make call to map method on the new manager array to call create manager html function and assign the new manager html array returned from map method to a new variable
-    //     // make call to join method on the new manager html array to convert it to html string and assign it to a new variable
-    //     // push the new manager html string to the employee html array
-    //     // option - you can use chained array methods to avoid create new variables
-    //     html.push(
-    //     );
-
-    //     // make call to filter method on team array - for each employee in team array to check if the employee's role is "Engineer" via the employee's get role method and assign the new engineer array returned from filter method to a new variable
-    //     // make call to map method on the new engineer array to call create engineer html function and assign the new engineer html array returned from map method to a new variable
-    //     // make call to join method on the new engineer html array to convert it to html string and assign it to a new variable
-    //     // push the new engineer html string to the employee html array
-    //     // option - you can use chained array methods to avoid create new variables
-    //     html.push(
-    //     );
-
-    //     // make call to filter method on team array - for each employee in team array to check if the employee's role is "Intern" via the employee's get role method and assign the new intern array returned from filter method to a new variable
-    //     // make call to map method on the new intern array to call create intern html function and assign the new intern html array returned from map method to a new variable
-    //     // make call to join method on the new intern html array to convert it to html string and assign it to a new variable
-    //     // push the new intern html string to the employee html array
-    //     // option - you can use chained array methods to avoid create new variables
-    //     html.push(
-    //     );
-
-
-
-    //     return html.join("");
-
-    // }
-
-
-
-    // call join method on employee html array to convert it to html string and return it to the caller
 
     for (let i = 0; i < team.length; i++) {
         if (team[i].getRole() === "Manager") {
@@ -118,16 +82,6 @@ const create_team_function = team => {
 
 }
 
-
-
-// export function to generate entire page with team array passed in as input parameter from index.js
-// - return template literal for entire html replacing team member html with returned value from create-team-function via template literal varaible expression
-// module.exports = team => {
-
-//     return `
-
-//     `;
-// };
 
 function render(employee) {
     return `
