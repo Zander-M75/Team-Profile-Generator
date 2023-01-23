@@ -33,6 +33,8 @@ test("Test email setting for employees", () => {
   // Assign an email to a new variable
   // Instantiate the Employee class, passing a name and an id and the email variable as input arguments, to create an employee object and assign it to a new variable
   // Expect the email of the employee object to be equal to the value of the email variable
+  const person = new Employee("John", 1, "john@company.com");
+  expect(person.email).toBe("john@company.com")
 });
 
 // Test get name method
@@ -51,7 +53,7 @@ test("test id method", () => {
   // Instantiate the Employee class, passing an employee name and the id variable as auguments, to create an object and assign it to an new variable
   // Expect the getId method of the object to return the id to be equal to the value of the emplyee id variable
   const person = new Employee("John", 1, "john@company.com");
-  expect(person.getID()).toBe(1)
+  expect(person.getId()).toBe(1)
 });
 
 // Test get email method

@@ -1,4 +1,41 @@
-div.card-body {
-    display: grid;
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 100vh;
+    width: 300vw;
+    max-width: 1000px;
+
+}
+
+.box {
+    display: inline-flex;
+    flex-direction: column;
+    max-height: 300px;
+    max-width: 300px;
+
+}
+
+.card-con {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 15px;
+    list-style: none;
+    margin-left: 50px;
+}
+
+.card-header {
+    font-weight: bolder;
+    font-size: larger;
+    margin-bottom: 40px;
 }
