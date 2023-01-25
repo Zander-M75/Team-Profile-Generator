@@ -18,7 +18,8 @@ The user will follow command-line inquirer prompts to create profiles for their 
 ## Links
 
 Github Repo: https://github.com/Zander-M75/Team-Profile-Generator
-Video Demo: https://www.awesomescreenshot.com/video/14250423?key=b1040cd22e57530cf78b99aa019ca857
+
+Video Walkthrough: https://www.awesomescreenshot.com/video/14250423?key=b1040cd22e57530cf78b99aa019ca857
 
 
 ## Usage
