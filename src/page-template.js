@@ -9,14 +9,15 @@ const create_team_function = team => {
     console.log(manager);
     return `
 
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">${manager.name}</div>
-        <div class="card-body">
-          <h5 class="card-title"> ${manager.getRole()}</h5>
-          <li class="body-item">ID:${manager.id}</li>
-          <li class="body-item">Email:${manager.email}</li>
-          <li class="body-item">Office:${manager.officeNumber}</li>
-        </div>
+    <div class="employee-card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">${manager.name}</div>
+    <div class="card-body">
+      <h5 class="card-title">${manager.getRole()}</h5>
+      <li class="body-item">ID:${manager.id}</li>
+      <li class="body-item">Email:${manager.email}</li>
+      <li class="body-item">Office:${manager.officeNumber}</li>
+    </div>
+  </div>
 
         `;
   };
@@ -27,14 +28,16 @@ const create_team_function = team => {
     console.log(engineer);
     return `
 
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">${engineer.getName()}</div>
-        <div class="card-body">
-          <h5 class="card-title">${engineer.getRole()}</h5>
-          <li class="body-item">ID:${engineer.getId()}</li>
-          <li class="body-item">Email:${engineer.getEmail()}</li>
-          <li class="body-item">Github:${engineer.getGithub()}</li>
-        </div>
+    <div class="employee-card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">${engineer.getName()}</div>
+    <div class="card-body">
+      <h5 class="card-title">${engineer.getRole()}</h5>
+      <li class="body-item">ID:${engineer.getId()}</li>
+      <li class="body-item">Email:${engineer.getEmail()}</li>
+      <li class="body-item">Github:${engineer.getGithub()}</li>
+    </div>
+  </div>
+
 
         `;
   };
@@ -45,16 +48,15 @@ const create_team_function = team => {
     console.log(intern);
     return `
 
-        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">${intern.getName()}</div>
-        <div class="card-body">
-          <h5 class="card-title">${intern.getRole()}</h5>
-          <li class="body-item">ID:${intern.getId()}</li>
-          <li class="body-item">Email:${intern.getEmail()}</li>
-          <li class="body-item">School:${intern.getSchool()}</li>
-        </div>
-
-
+    <div class="employee-card text-white bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header">${intern.getName()}</div>
+      <div class="card-body">
+        <h5 class="card-title">${intern.getRole()}</h5>
+        <li class="body-item">ID:${intern.getId()}</li>
+        <li class="body-item">Email:${intern.getEmail()}</li>
+        <li class="body-item">School:${intern.getSchool()}</li>
+      </div>
+    </div>
 
         `;
   };
@@ -86,18 +88,18 @@ const create_team_function = team => {
 function render(employee) {
   return `
 
-        <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <meta name="Description" content="Team profile html page generated through node commands."/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      <link rel="stylesheet" href="style.css">
-    <div class="card">
-    <div class="card-header">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Team profile html page generated through node commands." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <div class="card">
+    <div class="card-header text-center">
       My Team
     </div>
-    <div class="card-body">
+    <div class="card-body d-flex justify-content-center">
       ${create_team_function(employee)}
     </div>
   </div>
